@@ -1,0 +1,168 @@
+html, body{
+	width: 100%;
+	height: 100%;
+}
+
+.container {
+    width: 600px;
+    height: 280px;
+
+    box-shadow: 0 0 90px 2px #ddd;
+
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.right {
+    font-family: monospace;
+    position: relative;
+    width: 100%;
+    height: 92%;
+    padding-top:4%;
+    padding-bottom:4%;
+    float: left;
+    background: #fff;
+}
+
+
+/* --------------- TOP TABS -------------  */
+
+.tabs {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 15px;
+    font-size: 19px;
+}
+
+.tabs li {
+    list-style-type: none;
+    display: inline;
+    color: #6CD6FA;
+}
+
+/* ///////////////////////////////////////  */
+
+
+/* --------------- Login FORM -------------  */
+
+.login-top {
+    position: absolute;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 90%;
+    text-align: center;
+}
+
+.login-top form input[type='text'], .login-top form input[type='password']{
+    font-size: 10pt;
+    padding: 18px 27px 10px 10px;
+    width: 87%;
+    border: 0;
+    outline: 0;
+    border-bottom: 2px solid #cecfd3;
+    color: #16214D;
+}
+
+.login-top form input[type='text'] {
+    background: url("../assets/mail.png") no-repeat 98% 67%;
+    background-size: 20px;
+}
+
+.login-top form #userName{
+    background: url("../assets/user.png") no-repeat 98% 67%;
+    background-size: 20px;
+}
+
+.login-top form input[type='password'] {
+    background: url("../assets/pwd.png") no-repeat 98% 67%;
+    background-size: 20px;
+}
+
+.submit {
+    text-align: left;
+    margin-top: 20px;
+	text-align: center;
+}
+
+.submit input{
+	width: 90%;
+    font-size: 8pt;
+    padding: 6px 13px;
+    color: #44c7f4;
+    background-color: #fff;
+    border: 2px solid #44c7f4;
+    outline: none;
+    cursor: pointer;
+    border-radius: 20px;
+
+    transition: color 0.5s linear, background-color 0.5s linear;
+}
+
+.submit input:hover {
+    color: #fff;
+    background-color: #44c7f4;
+}
+
+@media screen and (max-device-width: 480px)
+{
+    html, body{
+        width: 100%;
+        height: 100%;
+    }
+
+    nav{
+
+        display: block;
+        width: 100%;
+        height: 40px;
+    }
+
+    nav ul {
+        position: fixed;
+        z-index: 2;
+        text-align: center;
+        height: 40px;
+    }
+
+    nav ul img {
+        display: none;
+    }
+
+    .menuTitle {
+        display: none;
+    }
+
+    nav ul li{
+        display: inline-block;
+        padding: 0 10px;
+
+        font-size: 2em;
+    }
+
+    .container {
+        height: 410px;
+    }
+
+    .right {
+
+        box-shadow: 0 0 90px 2px #ddd;
+        transform: scale(1.8, 1.8);
+        width: 100%;
+    }
+
+    .login-top form input[type='text'], .login-top form input[type='password']{
+        font-size: 1.5em;
+    }
+
+    .submit {
+        text-align: center;
+    }
+
+    .login-top form input[type='submit']{
+        width: 100%;
+        font-size: 1.3em;
+    }
+
+}

@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#background {
+    width: 100%;
+    height: 95%;
+
+    background-color: #16214D;
+}
+
+.container {
+    width: 600px;
+    height: 280px;
+    margin: 0 auto;
+
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/*//////////////////////////////////////////////////////////*/
+
+/* --------------- Left DIV-------------  */
+.left {
+    font-family: cursive;
+    color: #fff;
+
+    text-align: center;
+    position: relative;
+    width: 45%;
+    height: 58%;
+    padding:12% 0;
+    float: left;
+    background: #44C7F4;
+}
+
+.left ul {
+    margin-left: 30%;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.left ul li{
+    font-size: 9pt;
+}
+
+/*///////////////////////////////////////*/
+
+/* --------------- Right DIV-------------  */
+.right {
+    font-family: monospace;
+
+    position: relative;
+    width: 55%;
+    height: 92%;
+    padding-top:4%;
+    padding-bottom:4%;
+    float: left;
+    background: #fff;
+}
+
+/* --------------- TOP TABS -------------  */
+
+.tabs {
+    width: 310px;
+    padding-left: 27px;
+    padding-bottom: 15px;
+    font-size: 19px;
+}
+
+.tabs li {
+    list-style-type: none;
+    display: inline;
+    color: #DADCDF;
+}
+
+.tabs li:hover {
+    cursor: pointer;
+}
+
+label  {
+    padding: 0 6px;
+}
+
+.active {
+    color: #6CD6FA;
+    transition: color 0.7s linear;
+}
+
+/* ///////////////////////////////////////  */
+
+/* --------------- Login FORM -------------  */
+
+.login-top {
+    position: absolute;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 90%;
+    opacity: 0;
+    transition: opacity 0.7s linear;
+    text-align: center;
+}
+
+.login-top form input[type='text'], .login-top form input[type='password']{
+    font-size: 10pt;
+    padding: 18px 27px 10px 10px;
+    width: 87%;
+    border: 0;
+    outline: 0;
+    border-bottom: 2px solid #cecfd3;
+    color: #16214D;
+}
+
+.login-top form input[type='text'] {
+    background: url("../assets/mail.png") no-repeat 98% 67%;
+    background-size: 20px;
+}
+
+.login-top form #userName{
+    background: url("../assets/user.png") no-repeat 98% 67%;
+    background-size: 20px;
+}
+
+.login-top form input[type='password'] {
+    background: url("../assets/pwd.png") no-repeat 98% 67%;
+    background-size: 20px;
+}
+
+.submit {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.submit input{
+    font-size: 8pt;
+    padding: 6px 13px;
+    color: #44c7f4;
+    background-color: #fff;
+    border: 2px solid #44c7f4;
+    outline: none;
+    cursor: pointer;
+    border-radius: 20px;
+
+    transition: color 0.5s linear, background-color 0.5s linear;
+}
+
+.submit input:hover {
+    color: #fff;
+    background-color: #44c7f4;
+}
+
+
+/*///////////////////////////////////////*/
+
+.bottomLine {
+    width: 100%;
+    text-align: center;
+    font-family: verdana;
+    font-size: 9pt;
+    margin-top: 80px;
+}
+
+.bottomLine span:hover {
+    color: #31C7D9;
+    cursor: pointer;
+    text-decoration: underline;
+}
+/*///////////////////////////////////////*/
+
+.msgBox {
+    width: 600px;
+    color: red;
+    background: #16214D;
+
+    font-family: verdana;
+
+    margin: 0 auto;
+    position: absolute;
+    bottom: -20%;
+    text-align: center;
+}   
+
+.footer {
+    font-family: cursive;
+    font-size: 10pt;
+
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    height: 5%;
+    color: #fff;
+    background-color: #16214D;
+    text-align: center;
+}
+
+
+@media screen and (max-device-width: 480px)
+{
+
+    #background {
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .container {
+        top: 20%;
+        transform:scale(1.5, 2);
+        height: 410px;
+    }
+
+    .left {
+        float: none;
+        font-size: 2em;
+        height: 100px;
+        width: 100%;
+        font-family:monospace;
+    }
+    
+    .left ul li{
+         font-size: .7em;
+    }
+
+    .right {
+        float: none;
+        margin: 0 auto;
+        width: 100%;
+        height: 360px;
+    }
+
+    .login-top form input[type='text'], .login-top form input[type='password']{
+        font-size: 1.5em;
+    }
+
+    .submit {
+        text-align: center;
+    }
+
+    .login-top form input[type='submit']{
+        width: 100%;
+        font-size: 1.3em;
+    }
+
+    .msg {
+        position: relative;
+        bottom: -10px;
+        font-size: 150%;
+    }
+
+    .footer {
+        display: none;
+    }
+
+}

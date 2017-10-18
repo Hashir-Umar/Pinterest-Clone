@@ -1,0 +1,406 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body{
+	height: 100%;
+	width: 100%;
+}
+
+
+#menubar {
+	position: fixed;
+	top: 0;
+	background-color: #232323;
+	min-width: 760px;
+	width: 100%;
+	z-index: 1;
+	float: left;
+	color: #fff;
+	box-shadow: 0 1px 9px #ddd;
+}
+
+.logo {
+	float: left;
+	border: 3px solid #fff;
+	border-radius: 50%;
+	margin-left: 20px;
+	margin-top: 3px;
+}
+
+.menu:hover {
+	cursor: pointer;
+}
+
+.searchbar {
+	margin-left: 20px;
+	width: 400px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	float: left;
+	display: inline-block;
+}
+
+.searchbar input {
+	color: #E3E3E3;
+	width: 100%;
+	height: 30px;
+	background-color: #111;
+	padding-left: 10px;
+	outline: 0;
+	border: 0;
+	border-radius: 3px;
+}
+
+.searchbar input:focus {
+	transition: background-color 0.5s ease;
+	outline: blue solid thin;
+}
+
+.searchIcon {
+	text-align: center;
+	margin-top: 9px;
+	margin-left: 10px;
+	background-color: #333;
+	float: left;
+	width: 50px;
+	height: 28px;
+}
+
+.searchIcon:hover {
+	opacity: 0.7;
+	cursor: pointer;
+}
+
+.username span{
+	float: right;
+	margin-top: 7px;
+	margin-right: 20px;
+	border-radius: 50%;
+	height: 30px;
+	width: 30px;
+	text-align: center;
+	line-height: 30px;
+	font-family: verdana;
+	border: 1px solid lightblue;
+}
+
+.username span:hover {
+	cursor: pointer;
+}
+
+.drop-menu {
+	opacity: 0;
+	right: 0;
+	position: absolute;
+	margin-top: 46px;
+	transition: opacity 0.4s linear;
+}
+
+.drop-menu a {
+	color: #fefefe;
+	font-size: 9pt;
+	font-family: verdana;
+	text-align: center;
+	text-decoration: none;
+}
+
+.drop-menu a li {
+	border-bottom: 1px solid #ddd;
+	list-style-type: none;
+	display: block;
+	padding: 10px 20px;
+	background-color: #232323;
+}
+
+
+#menubar .simple-menu {
+	position: relative;
+	margin-right: 20px;
+	height: 46px;
+	text-align: center;
+	float: right;
+}
+
+#menubar .simple-menu a li{
+	padding-left: 2px;
+	display: inline-block;
+	list-style-type: none;
+}
+
+#menubar .simple-menu a{
+	line-height: 46px;
+	color: #fefefe;
+	font-family: sans-serif;
+	font-size: 9pt;
+}
+
+#menubar .simple-menu li:hover{
+	color: gray;
+	text-shadow: 0 1px 1px rgba(0,0,0, 0.4);
+}
+
+.current{
+	color: gray;
+	text-shadow: 0 1px 1px rgba(0,0,0, 0.4);
+}
+
+/*	 searchImage	*/
+
+#main {
+	margin: 0 auto;
+}
+
+.searchImage {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	transform: scale(1.1);
+	width: 100%;
+	height: 100%;
+	transition: all 0.5s linear;
+
+}
+
+.searchImage:hover {
+	transform: scale(1);
+	opacity: 0.4;
+	cursor: pointer;
+}
+
+/*///////////////////*/
+
+/* Main section of html where my images are gone */
+
+.content-back {
+	overflow: hidden;
+	padding: 55px 10px 10px 10px;
+	max-width: 1200px;
+	min-width: 1000px;
+	margin: 0 auto;
+}
+
+.content {
+	width: 100%;
+}
+
+.content .image-back {
+	width: 33%;
+	height: 330px;
+	position: relative;
+	float: left;
+	margin: 1px 1px;
+	border-radius: 2px;
+	overflow: hidden;
+	transition: background-color 0.4s linear;
+}
+
+.content .image-back:hover{
+	opacity: 1;
+	background-color: #333;
+}
+
+.content .image-back img {
+	width: 100%;
+	height: 94%;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	transform: scale(1.1);
+	transition: all 0.5s linear;
+}
+
+.content .image-back .image-tags {
+	text-align: center;
+	line-height: 300px;
+	opacity: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transition: opacity 0.5s linear;
+
+}
+
+.content .image-back .image-tags:hover {
+	opacity: 1;
+	cursor: pointer;
+}
+
+.img-view, .img-download {
+	font-size: 16pt;
+	font-family: verdana;
+	color: #fff;
+	text-decoration: none;
+	padding-right: 10px;
+}
+
+.img-uploader {
+	transition: opacity 0.5s linear;
+	opacity: 0;
+	font-size: 10pt;
+	font-family: verdana;
+	color: #fff;
+	position: absolute;
+	bottom: 2px;
+	left: 2px;
+}
+
+.img-collector {
+	position: relative;
+	left: 40%;
+	opacity: 0.7;
+	width:100px;
+	height:50px;
+	transition: all 0.5s linear;
+	transform: translateY(-50px);
+}
+
+.img-collector:hover {
+	transform: translateY(50px);
+	cursor: pointer;
+	opacity: 1;
+}
+
+#wrapper{
+	display: none;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+#close {
+	position: absolute;
+	right: 4px;
+	top: 4px;
+}
+
+#close:hover {
+	cursor: pointer;
+	opacity: 0.7;
+}
+
+
+.animate {
+    animation: zoom 0.6s
+}
+
+@keyframes zoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+@media screen and (max-width: 600px) {
+
+	#menubar {
+		max-width: 90%;
+		min-width: 580px;
+	}
+
+	body {
+		overflow-x: auto;
+	}
+
+	.searchbar {
+		width: 200px;
+	}
+
+	.content-back {
+		min-width: 600px;
+		max-width: 600px;
+		padding: 50px 5px 5px 5px;
+	}
+
+	.content {
+		width: 95%;
+	}
+
+	.content .image-back {
+		width: 100%;
+		height: 400px;
+	}
+
+	.content .image-back .image-tags {
+		line-height: 400px;
+	}
+
+	.content .image-back img{
+		width: 100%;
+		height: 100%;
+	}
+
+
+}
+
+/*  For Mobiles  */
+@media screen and (max-device-width: 480px)
+{
+	.content-back {
+		min-width: 90%;
+		max-width: 100%;
+		padding: 50px 5px 5px 5px ;
+	}
+
+	.content {
+		width: 100%;
+	}
+
+	.content .image-back{
+		width: 100%;
+		height: 700px;
+	}
+
+	.content .image-back img{
+		width: 100%;
+		height: 100%;
+	}
+}
+
+/*  showing image on a new div when any of the image will click  */
+#i {
+	display: none;
+	margin: 0 auto;
+	text-align: center;
+	background-color: #333;
+	height:100vh;
+	overflow-y: hidden;
+}
+
+#displayImage {
+	width: 50%;
+	max-height: 60%;
+	margin-top: 10%;
+}
+
+ #download-btn {
+	width: 200px;
+}
+
+.cross {
+	display: none;
+	position: absolute;
+	right: 20%;
+	top: 10%;
+}
+
+.cross:hover {
+	cursor: pointer;
+	opacity: 0.6;
+}
+
+.private {
+	color: #fefefe;
+	font-family: verdana;
+	font-size: 10pt;
+}
+
+/*  /////////////////////////////////////////////////////////////  */
